@@ -4,5 +4,27 @@
 
 .navbar {
     @include layout.flexmixin(row, align-items, space-evenly);
-    width: 100vw;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: palette.$navbar-background;
+    padding: 10px;
+
+    &__item {
+        @include typography.small-headings(25px);
+        text-decoration: none;
+        transform: translateY(-1.5px);
+        box-shadow: 1.5px 1.5px 5px 0 #09090b;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    &__item:visited,
+    &__item:active {
+        @extend .navbar__item;
+    }
+
+    &__item:hover {
+        transform: translateY(1.5px);
+        box-shadow: none;
+    }
 }
