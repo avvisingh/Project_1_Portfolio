@@ -1,0 +1,8 @@
+@use "../partials/layout";
+@use "../partials/typography";
+@use "../partials/palette";
+
+.navbar {
+    @include layout.flexmixin(row, align-items, space-evenly);
+    width: 100vw;
+}

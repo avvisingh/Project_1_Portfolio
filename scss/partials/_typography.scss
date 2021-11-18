@@ -1,3 +1,32 @@
-@use "plaette";
+@use "palette";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap");
 
 $font-used: "Nunito", sans-serif;
+
+@mixin big-headings($font-size) {
+    color: palette.$primary-font-colour;
+    font-family: $font-used;
+    font-weight: 800;
+    font-size: $font-size;
+}
+
+@mixin small-headings($font-size) {
+    color: palette.$primary-font-colour;
+    font-family: $font-used;
+    font-weight: 600;
+    font-size: $font-size;
+}
+
+@mixin blurb-text($font-size) {
+    color: palette.$primary-font-colour;
+    font-family: $font-used;
+    font-weight: 400;
+    font-size: $font-size;
+}
+
+@mixin small-blurb-text($font-size) {
+    color: palette.$primary-font-colour;
+    font-family: $font-used;
+    font-weight: 300;
+    font-size: $font-size;
+}
