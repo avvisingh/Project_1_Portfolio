@@ -1,3 +1,40 @@
 @use "../partials/palette";
 @use "../partials/layout";
 @use "../partials/typography";
+
+.main-card-container {
+    @include layout.flexmixin(row, center, space-around);
+    @include layout.card-border(3px, palette.$border-colour);
+    border-radius: 15px;
+    background-color: palette.$secondary-background-colour;
+    width: 60%;
+    margin: 50px auto;
+    padding: 70px 0;
+}
+
+.main-card {
+    @include layout.flexmixin(row, center, space-around);
+    width: 100%;
+    margin: auto;
+    vertical-align: middle;
+
+    &__text {
+        width: 66.666%;
+        text-align: center;
+        @include layout.flexmixin(column, center, space-evenly);
+
+        &-heading {
+            @include typography.big-headings(60px);
+        }
+
+        &-sub-heading {
+            @include typography.small-headings(40px);
+        }
+    }
+
+    &__img-container {
+        width: 33.333%;
+        align-items: center;
+        padding: 0;
+    }
+}

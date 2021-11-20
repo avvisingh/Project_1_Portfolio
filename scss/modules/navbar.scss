@@ -4,6 +4,7 @@
 
 .navbar {
     @include layout.flexmixin(row, align-items, space-evenly);
+    @include layout.navbar-border(palette.$border-colour);
     width: 100%;
     margin-bottom: 20px;
     background-color: palette.$navbar-background;

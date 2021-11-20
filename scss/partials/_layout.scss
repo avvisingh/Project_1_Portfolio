@@ -1,6 +1,16 @@
+@use "palette";
+
 @mixin flexmixin($direction, $alignment, $justification) {
     display: flex;
     flex-direction: $direction;
     align-items: $alignment;
     justify-content: $justification;
+}
+
+@mixin navbar-border($colour) {
+    border-bottom: 3px solid $colour;
+}
+
+@mixin card-border($width, $colour) {
+    border: $width solid $colour;
 }
