@@ -3,6 +3,15 @@
 @use "../partials/typography";
 @use "../partials/mediaQueries";
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: palette.$background-colour;
+}
+
 @include mediaQueries.desktop {
     .main-card-container {
         @include layout.flexmixin(row, center, space-around);

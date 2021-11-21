@@ -1,0 +1,192 @@
+@use "../partials/palette";
+@use "../partials/layout";
+@use "../partials/typography";
+@use "../partials/mediaQueries";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: palette.$background-colour;
+}
+
+@include mediaQueries.phone {
+    .project-gallery {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        @include layout.flexmixin(column, center, space-evenly);
+
+        &__item {
+            margin: 15px auto;
+            @include layout.card-border(2px, palette.$border-colour);
+            border-radius: 15px;
+            background-color: palette.$secondary-background-colour;
+
+            &-img {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                margin: 0;
+            }
+
+            &-text {
+                margin: 5px 0;
+                text-align: center;
+
+                &--title {
+                    @include typography.small-headings(20px);
+                }
+
+                &--blurb {
+                    @include typography.blurb-text(15px);
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries.tablet-portrait {
+    .project-gallery {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        @include layout.flexmixin(row, center, space-evenly);
+        flex-wrap: wrap;
+
+        &__item {
+            margin: 15px 15px;
+            @include layout.card-border(2px, palette.$border-colour);
+            border-radius: 15px;
+            background-color: palette.$secondary-background-colour;
+
+            &-img {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                margin: 0;
+            }
+
+            &-text {
+                margin: 5px 0;
+                text-align: center;
+
+                &--title {
+                    @include typography.small-headings(20px);
+                }
+
+                &--blurb {
+                    @include typography.blurb-text(15px);
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries.tablet-landscape {
+    .project-gallery {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        @include layout.flexmixin(row, center, space-evenly);
+        flex-wrap: wrap;
+
+        &__item {
+            margin: 15px 15px;
+            @include layout.card-border(2px, palette.$border-colour);
+            border-radius: 15px;
+            background-color: palette.$secondary-background-colour;
+
+            &-img {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                margin: 0;
+            }
+
+            &-text {
+                margin: 5px 0;
+                text-align: center;
+
+                &--title {
+                    @include typography.small-headings(20px);
+                }
+
+                &--blurb {
+                    @include typography.blurb-text(15px);
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries.laptop {
+    .project-gallery {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        @include layout.flexmixin(row, center, space-evenly);
+        flex-wrap: wrap;
+
+        &__item {
+            margin: 15px 20px;
+            @include layout.card-border(2px, palette.$border-colour);
+            border-radius: 15px;
+            background-color: palette.$secondary-background-colour;
+
+            &-img {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                margin: 0;
+            }
+
+            &-text {
+                margin: 5px 0;
+                text-align: center;
+
+                &--title {
+                    @include typography.small-headings(20px);
+                }
+
+                &--blurb {
+                    @include typography.blurb-text(15px);
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries.desktop {
+    .project-gallery {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+        @include layout.flexmixin(row, center, space-evenly);
+        flex-wrap: wrap;
+
+        &__item {
+            margin: 15px 25px;
+            @include layout.card-border(2px, palette.$border-colour);
+            border-radius: 15px;
+            background-color: palette.$secondary-background-colour;
+
+            &-img {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                margin: 0;
+            }
+
+            &-text {
+                margin: 5px 0;
+                text-align: center;
+
+                &--title {
+                    @include typography.small-headings(20px);
+                }
+
+                &--blurb {
+                    @include typography.blurb-text(15px);
+                }
+            }
+        }
+    }
+}
