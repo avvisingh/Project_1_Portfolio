@@ -135,3 +135,34 @@ body {
         }
     }
 }
+
+@include mediaQueries.desktop {
+    .tech-stack-gallery {
+        @include layout.flexmixin(row, center, space-evenly);
+        @include layout.card-border(3px, palette.$border-colour);
+        border-radius: 25px;
+        background-color: palette.$secondary-background-colour;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 100%;
+        margin: 50px auto auto auto;
+
+        &__item {
+            width: 33.333%;
+            height: auto;
+            margin: 25px auto;
+            text-align: center;
+
+            &--img {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+            }
+
+            &--title {
+                margin-bottom: 7.5px;
+                @include typography.small-headings(25px);
+            }
+        }
+    }
+}
