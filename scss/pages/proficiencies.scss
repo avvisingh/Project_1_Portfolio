@@ -24,7 +24,10 @@ body {
         margin: 50px auto auto auto;
 
         &__item {
-            margin: 20px;
+            width: 33.333%;
+            height: auto;
+            margin: 15px auto;
+            text-align: center;
 
             &--img {
                 width: 50px;
@@ -52,7 +55,10 @@ body {
         margin: 50px auto auto auto;
 
         &__item {
-            margin: 30px;
+            width: 33.333%;
+            height: auto;
+            margin: 15px auto;
+            text-align: center;
 
             &--img {
                 width: 60px;
@@ -80,17 +86,20 @@ body {
         margin: 50px auto auto auto;
 
         &__item {
-            margin: 40px;
+            width: 33.333%;
+            height: auto;
+            margin: 15px auto;
+            text-align: center;
 
             &--img {
-                width: 60px;
-                height: 60px;
+                width: 67.5px;
+                height: 67.5px;
                 margin: auto;
             }
 
             &--title {
                 margin-bottom: 7.5px;
-                @include typography.small-headings(17.5px);
+                @include typography.small-headings(20px);
             }
         }
     }
