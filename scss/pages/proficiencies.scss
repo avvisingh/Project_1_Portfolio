@@ -11,3 +11,24 @@
 body {
     background-color: palette.$background-colour;
 }
+
+@include mediaQueries.phone {
+    .tech-stack-gallery {
+        @include layout.flexmixin(row, center, space-evenly);
+        background-color: palette.$secondary-background-colour;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 100%;
+        margin: 50px auto auto auto;
+
+        &__item {
+            margin: 20px;
+        }
+
+        &__item--img {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+        }
+    }
+}
