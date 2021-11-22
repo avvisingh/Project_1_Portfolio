@@ -39,3 +39,59 @@ body {
         }
     }
 }
+
+@include mediaQueries.tablet-portrait {
+    .tech-stack-gallery {
+        @include layout.flexmixin(row, center, space-evenly);
+        @include layout.card-border(3px, palette.$border-colour);
+        border-radius: 25px;
+        background-color: palette.$secondary-background-colour;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 100%;
+        margin: 50px auto auto auto;
+
+        &__item {
+            margin: 30px;
+
+            &--img {
+                width: 60px;
+                height: 60px;
+                margin: auto;
+            }
+
+            &--title {
+                margin-bottom: 7.5px;
+                @include typography.small-headings(17.5px);
+            }
+        }
+    }
+}
+
+@include mediaQueries.tablet-landscape {
+    .tech-stack-gallery {
+        @include layout.flexmixin(row, center, space-evenly);
+        @include layout.card-border(3px, palette.$border-colour);
+        border-radius: 25px;
+        background-color: palette.$secondary-background-colour;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 100%;
+        margin: 50px auto auto auto;
+
+        &__item {
+            margin: 40px;
+
+            &--img {
+                width: 60px;
+                height: 60px;
+                margin: auto;
+            }
+
+            &--title {
+                margin-bottom: 7.5px;
+                @include typography.small-headings(17.5px);
+            }
+        }
+    }
+}
