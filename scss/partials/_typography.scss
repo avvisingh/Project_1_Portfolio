@@ -18,7 +18,7 @@ $font-used: "Nunito", sans-serif;
 }
 
 @mixin blurb-text($font-size) {
-    color: palette.$primary-font-colour;
+    color: palette.$secondary-font-colour;
     font-family: $font-used;
     font-weight: 400;
     font-size: $font-size;

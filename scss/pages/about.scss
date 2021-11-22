@@ -2,3 +2,32 @@
 @use "../partials/layout";
 @use "../partials/typography";
 @use "../partials/mediaQueries";
+
+@include mediaQueries.phone {
+    .about-body {
+        background-color: palette.$secondary-background-colour;
+        width: 80%;
+        margin: 50px auto auto auto;
+        padding: 20px;
+        @include layout.card-border(3px, palette.$border-colour);
+        border-radius: 20px;
+
+        &__heading {
+            @include typography.big-headings(40px);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        &__sub-section {
+            &--heading {
+                @include typography.small-headings(30px);
+                text-align: center;
+                margin-bottom: 5px;
+            }
+
+            &--text {
+                @include typography.blurb-text(17.5px);
+            }
+        }
+    }
+}
