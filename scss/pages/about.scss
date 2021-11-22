@@ -118,3 +118,32 @@
         }
     }
 }
+
+@include mediaQueries.desktop {
+    .about-body {
+        background-color: palette.$secondary-background-colour;
+        width: 85%;
+        margin: 65px auto auto auto;
+        padding: 30px;
+        @include layout.card-border(3px, palette.$border-colour);
+        border-radius: 20px;
+
+        &__heading {
+            @include typography.big-headings(50px);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        &__sub-section {
+            &--heading {
+                @include typography.small-headings(40px);
+                text-align: center;
+                margin-bottom: 12.5px;
+            }
+
+            &--text {
+                @include typography.blurb-text(20px);
+            }
+        }
+    }
+}
